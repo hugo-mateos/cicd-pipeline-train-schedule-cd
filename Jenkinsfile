@@ -39,7 +39,9 @@ pipeline {
             }
         }
         stage ('PreDeploy01') {
-            echo 'Deplot 01 antes de producción'
+            steps {
+                echo 'Deplot 01 antes de producción'
+            }
         }
         stage('DeployToProduction') {
             when {
